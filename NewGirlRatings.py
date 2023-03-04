@@ -20,10 +20,7 @@ for i in range(1,8):
 	for k, episode in enumerate(episodes, start=1):
 		rating = episode.find('span', {'class': 'ipl-rating-star__rating'}).text
 		season = i
-		episode_num = k
-        
-		if episode_num < 10:
-			episode_num = episode_num / 10
+		episode_num = k/100
 
 		list = list + (f'{season + episode_num}, {rating}') + "\n"
 
