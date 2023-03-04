@@ -21,7 +21,11 @@ for i in range(1,8):
 		rating = episode.find('span', {'class': 'ipl-rating-star__rating'}).text
 		season = i
 		episode_num = k
-		list = list + (f'{season}, {episode_num}, {rating}') + "\n"
+        
+		if episode_num < 10:
+			episode_num = episode_num / 10
+
+		list = list + (f'{season} + {episode_num}, {rating}') + "\n"
 
 # print(list)
 
